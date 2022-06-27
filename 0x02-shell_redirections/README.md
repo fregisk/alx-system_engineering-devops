@@ -1,1 +1,1 @@
-confused smiley script
+confused smiley
