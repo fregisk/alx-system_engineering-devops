@@ -1,2 +1,2 @@
-#bin/bash
-cat -n | grep [13579][[:space:]] | tr -s ' ' | cut -f2
+#!/bin/bash
+tr 'A-Za-z' 'N-ZA-Mn-za-m' 
