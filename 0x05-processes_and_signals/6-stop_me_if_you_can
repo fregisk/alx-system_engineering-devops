@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Stop the task #4 with the pkill command
+pkill -f "4-to_infinity_and_beyond"
+
+
