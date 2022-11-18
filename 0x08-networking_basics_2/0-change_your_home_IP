@@ -1,4 +1,3 @@
-able File  7 lines (6 sloc)  228 Bytes
 #!/usr/bin/env bash
 # Change localhost to 127.0.0.2
 # Change facebook.com to 8.8.8.8
