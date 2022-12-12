@@ -1,4 +1,4 @@
-0x09. Web infrastructure design DevOps SysAdmin web infrastructure By: Sylvain Kalache, co-founder at Holberton School Weight: 1 Project to be done in teams of 3 people (your team: Fregis Koffi, REMI GNAMIEN, Aristide YAO) Project will start Dec 8, 2022 6:00 AM, must end by Dec 12, 2022 6:00 AM Manual QA review must be done (request it when you are done with the project) Challenge #3 has started! Concepts For this project, we expect you to look at these concepts:
+0x09. Web infrastructure design DevOps SysAdmin web infrastructure By: Sylvain Kalache, co-founder at Holberton School Weight: 1 Project to be done in teams of 3 people (your team:Fregis Koffi,  REMI GNAMIEN,  Aristide YAO) Project will start Dec 8, 2022 6:00 AM, must end by Dec 12, 2022 6:00 AM Manual QA review must be done (request it when you are done with the project) Challenge #3 has started! Concepts For this project, we expect you to look at these concepts:
 
 DNS Monitoring Web Server Network basics Load balancer Server
 
