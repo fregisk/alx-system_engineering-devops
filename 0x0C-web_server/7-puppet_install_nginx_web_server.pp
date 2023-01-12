@@ -1,22 +1,6 @@
-# Install and configure nginx
-package { 'jfryman-nginx':
-  ensure => installed,
-}
+# Installs a Nginx server
 
-include nginx
-
-class { 'nginx':
-  manage_repo    => true,
-  package_source => 'nginx-stable',
-}
-
-nginx::resource::server { '34.73.76.135':
-  listen_port      => 80,
-  www_root         => '/var/www/html/',
-  vhost_cfg_append => { 'rewrite' => '^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent' },
-}
-
-file { 'index':
-  path    => '/var/www/html/index.nginx-debian.html',
-  content => 'Holberton School for the win!',
+exec {'install':
+  provider => shell,
+  command  => 'sudo apt-get -y update ; sudo apt-get -y install nginx ; echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html ; sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/luischaparroc permanent;/" /etc/nginx/sites-available/default ; sudo service nginx start',
 }
