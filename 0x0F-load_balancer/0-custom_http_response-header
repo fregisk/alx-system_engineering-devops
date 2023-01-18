@@ -1,9 +1,16 @@
-#!/usr/bin/env bash
-# shellcheck disable=SC2154
-# This script configures Nginx so that its HTTP response contains a custom
-# header.
+# Use Puppet to automate the task of creating a custom HTTP header response
 
-sudo apt update
-sudo apt install nginx -y
-sudo sed -i "20i\        add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
-sudo service nginx restart
+exec {'update':
+  command => '/usr/bin/apt-get update',
+}
+-> package {'nginx':
+  ensure => 'present',
+}
+-> file_line { 'http_header':
+  path  => '/etc/nginx/nginx.conf',
+  match => 'http {',
+  line  => "http {\n\tadd_header X-Served-By \"${hostname}\";",
+}
+-> exec {'run':
+  command => '/usr/sbin/service nginx restart',
+}
